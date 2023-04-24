@@ -10,13 +10,15 @@ def lcm(num1, num2):
         great += 1 
     print(l)
 def hcf(num1, num2):
-    if num1 <= num2:
+    if num1 > num2:
         n = num1
     else:
         n = num2
-    for i in range(1, n+1):
-        if num1 % i == 0 and num2 % i == 0:
-            h = i
+    while(True):
+        if  num1 % n == 0 and num2 % n == 0:
+            h = n
+            break
+        n -= 1
     print(h)
 try:
     num1 = int(input())
